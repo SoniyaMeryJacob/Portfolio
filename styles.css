@@ -745,6 +745,30 @@ textarea.form-control {
   font-weight: 600;
 }
 
+.error-message {
+  min-height: 1.25rem;
+  margin-top: 0.45rem;
+  color: #ff9ea7;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.form-control.is-invalid {
+  border-color: rgba(255, 110, 120, 0.9) !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 110, 120, 0.12) !important;
+}
+
+.form-control.is-valid {
+  border-color: rgba(90, 214, 168, 0.9) !important;
+  box-shadow: 0 0 0 0.2rem rgba(90, 214, 168, 0.08) !important;
+}
+
+.success-message {
+  min-height: 1.25rem;
+  color: #7ef0bd;
+  font-weight: 600;
+}
+
 /* Footer and back to top */
 footer {
   padding: 1.6rem 0;

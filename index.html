@@ -530,7 +530,7 @@
                 <div class="contact-card card p-4 p-md-5">
                   <h3 class="h4 mb-2">Send a Message</h3>
 
-                  <form id="contactForm">
+                  <form id="contactForm" novalidate>
                     <div class="row g-3">
                       <div class="col-md-6">
                         <label class="form-label" for="contactName">Name</label>
@@ -538,10 +538,12 @@
                           type="text"
                           class="form-control"
                           id="contactName"
+                          name="name"
                           placeholder="Your name"
                           autocomplete="name"
                           required
                         />
+                        <div class="error-message" aria-live="polite"></div>
                       </div>
 
                       <div class="col-md-6">
@@ -552,10 +554,12 @@
                           type="email"
                           class="form-control"
                           id="contactEmail"
+                          name="email"
                           placeholder="you@example.com"
                           autocomplete="email"
                           required
                         />
+                        <div class="error-message" aria-live="polite"></div>
                       </div>
 
                       <div class="col-12">
@@ -566,9 +570,11 @@
                           type="text"
                           class="form-control"
                           id="contactSubject"
+                          name="subject"
                           placeholder="Project or opportunity"
                           required
                         />
+                        <div class="error-message" aria-live="polite"></div>
                       </div>
 
                       <div class="col-12">
@@ -578,16 +584,25 @@
                         <textarea
                           class="form-control"
                           id="contactMessage"
+                          name="message"
                           rows="5"
                           placeholder="Write your message..."
                           required
                         ></textarea>
+                        <div class="error-message" aria-live="polite"></div>
                       </div>
 
-                      <div class="col-12">
+                      <div
+                        class="col-12 d-flex flex-column flex-sm-row align-items-sm-center gap-3"
+                      >
                         <button type="submit" class="btn btn-primary btn-glow">
                           <i class="bi bi-send me-2"></i>Send
                         </button>
+                        <div
+                          id="formSuccessMessage"
+                          class="success-message"
+                          aria-live="polite"
+                        ></div>
                       </div>
                     </div>
                   </form>
